@@ -1,7 +1,6 @@
 package com.giwook.study.springvalidation.entity;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,12 +13,12 @@ import javax.validation.constraints.Size;
  *
  */
 @Data
-@NoArgsConstructor @AllArgsConstructor @Builder
+@NoArgsConstructor @AllArgsConstructor
 public abstract class ParentEntity {
 
 	@NotNull
 	private Boolean hasCar;
-	@Size(min = 10)
+	@Size(min = 1)
 	private String carName;
 
 }

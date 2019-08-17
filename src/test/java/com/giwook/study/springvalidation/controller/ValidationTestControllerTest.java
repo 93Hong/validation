@@ -34,6 +34,8 @@ class ValidationTestControllerTest {
 	void test_request_ok() throws Exception {
 
 		TestEntity testEntity = TestEntity.builder()
+			.hasCar(true)
+			.carName("car")
 			.age(27)
 			.name("giwook")
 			.build();
@@ -55,6 +57,8 @@ class ValidationTestControllerTest {
 	void test_request_bean_validation_error() throws Exception {
 
 		TestEntity testEntity = TestEntity.builder()
+			.hasCar(true)
+			.carName("car")
 			.age(6)
 			.name("giwook")
 			.build();

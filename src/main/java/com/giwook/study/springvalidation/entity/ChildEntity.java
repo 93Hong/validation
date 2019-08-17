@@ -13,11 +13,17 @@ import javax.validation.constraints.NotBlank;
 @Data @EqualsAndHashCode(callSuper = false)
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class ChildEntity extends ParentEntity {
 
 	@NotBlank
 	private String name;
 	@Min(value = 10)
 	private int age;
+
+	@Builder
+	public ChildEntity(Boolean hasCar, String carName, String name, int age) {
+		super(hasCar, carName);
+		this.name = name;
+		this.age = age;
+	}
 }
